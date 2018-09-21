@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ApplePicker : MonoBehaviour {
+public class ApplePicker : MonoBehaviour
+{
 
     [Header("Set in Inspector")]
     public GameObject basketPrefab;
@@ -12,12 +13,22 @@ public class ApplePicker : MonoBehaviour {
 
     void Start()
     {
-        for(int i = 0; i < numBaskets; i++)
+        for (int i = 0; i < numBaskets; i++)
         {
             GameObject tBasketGO = Instantiate<GameObject>(basketPrefab);
             Vector3 pos = Vector3.zero;
             pos.y = basketBottomY + (basketSpacingY * i);
             tBasketGO.transform.position = pos;
+        }
+    }
+
+    public void AppleDestroyed()
+    {
+        // Destroy all of the falling apples
+        GameObject[] tAppleArray = GameObject.FindGameObjectsWithTag("Apple");
+        foreach (GameObject tGO in tAppleArray)
+        {
+            Destroy(tGO);
         }
     }
 }
