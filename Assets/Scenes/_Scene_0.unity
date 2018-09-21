@@ -300,6 +300,11 @@ Prefab:
       propertyPath: leftAndRightEdge
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 114063027383013280, guid: 29b03564d79d9a7499026932cdc0b12e,
+        type: 2}
+      propertyPath: speed
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29b03564d79d9a7499026932cdc0b12e, type: 2}
   m_IsPrefabAsset: 0
