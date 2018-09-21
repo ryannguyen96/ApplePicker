@@ -33,7 +33,7 @@ public class AppleTree : MonoBehaviour
     {
         GameObject apple = Instantiate<GameObject>(applePrefab);
         apple.transform.position = transform.position;
-        Invoke("Drop Apple", secondsBetweenAppleDrops);
+        Invoke("DropApple", secondsBetweenAppleDrops);
     }
 
     void Update()
